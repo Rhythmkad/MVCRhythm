@@ -1,0 +1,16 @@
+﻿@if (Request.IsAuthenticated)
+{
+
+    <span>Welcome @Html.Encode(User.Identity.Name) </span>
+}
+else
+{
+    <div style="min-height: 219px;">
+        <table style="width:220px;">
+            <tr><td class="tdhref">@Html.ActionLink("Login", "Login", "Account")</td><td class="tdhref">@Html.ActionLink("Register", "Register", "Account")</td></tr>
+        </table>
+        <br />
+
+
+    </div>
+}
